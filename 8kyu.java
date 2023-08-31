@@ -264,3 +264,29 @@ public class Kata22 // Transportation on vacation
       return (d*40) - 50;
   }
 }
+
+class Kata23 // Remove exclamation marks
+{
+    static String removeExclamationMarks(String s) {
+      
+      String newS = s.replace("!", "");      
+        return newS;     
+    }
+}
+
+import java.util.List;
+
+public class MixedSum // Sum Mixed Array
+{
+
+ /*
+  * Assume input will be only of Integer o String type
+  */
+	public int sum(List<?> mixed) {	
+    int sum = 0;
+    for(Object s: mixed){
+            sum +=Integer.parseInt(s.toString());
+    }
+		return sum;
+	}
+}
