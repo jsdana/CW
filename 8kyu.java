@@ -290,3 +290,18 @@ public class MixedSum // Sum Mixed Array
 		return sum;
 	}
 }
+
+
+import java.util.ArrayList;
+
+public class Kata24 // Removing Elements
+{  
+  public static Object[] removeEveryOther(Object[] arr) {
+    ArrayList<Object> result = new ArrayList<Object>();
+    
+    for (int i = 0; i < arr.length; i+=2) 
+      result.add(arr[i]);    
+    
+   return result.toArray();
+  }
+}
