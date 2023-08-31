@@ -241,3 +241,26 @@ public class Kata20 // Count of positives / sum of negatives
         return duo; //return an array with count of positives and sum of negatives
     }
 }
+
+public class Kata21 // School Paperwork
+{
+  public static int paperWork(int n, int m) 
+  {
+    if(n<0 || m<0)
+      return 0;
+    
+    return n*m;
+  }
+}
+
+public class Kata22 // Transportation on vacation
+{
+  public static int rentalCarCost(int d) {
+    if(d<3)
+      return d * 40;
+    else if(d<7)
+      return (d*40) - 20;
+    else
+      return (d*40) - 50;
+  }
+}
