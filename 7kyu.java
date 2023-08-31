@@ -103,3 +103,42 @@ public class Kata6 {
     return Integer.parseInt(result);
   }
 }
+
+public class Kata7 {
+    public static int findShort(String s) {
+      
+      String[] words = s.split(" ");
+      int shortestIndex = words[0].length();
+      for(int i= 1; i<words.length; i++)
+        if(words[i].length() < shortestIndex)
+          shortestIndex = words[i].length();
+      
+      return shortestIndex;
+    }
+}
+
+public class Kata8 {
+    public static String disemvowel(String str) {
+      char[] nS = str.toCharArray();
+      char[] vowels = {'a','e','i','o','u','A','E', 'I', 'O', 'U'};
+      int isVowel = 0;
+      StringBuilder construction =  new StringBuilder();
+      for(int i=0; i<nS.length; i++){
+        
+        for(int j=0; j<vowels.length; j++)
+          if(nS[i] == vowels[j])
+            isVowel = 1;
+            
+        if(isVowel == 0)
+          construction.append(nS[i]);
+        
+        isVowel = 0;
+    }      
+      return construction.toString();
+  }
+
+  public static String disemvowel_(String str) // A much easier solution '-'
+  {
+      return str.replaceAll("[aAeEiIoOuU]", ""); // KEEP THIS IN MIND!!!
+  }
+}
