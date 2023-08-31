@@ -86,3 +86,20 @@ public class Kata5 // Isograms
       return true;
     } 
 }
+
+public class Kata6 {
+
+  public int squareDigits(int n) {
+    // TODO Implement me
+    String s = n + "";
+    String[] digits = s.split("");
+    String result = new String();
+
+    for (String str : digits) {
+      int curr = Integer.parseInt(str);
+      result +=  curr * curr;
+    }
+
+    return Integer.parseInt(result);
+  }
+}
